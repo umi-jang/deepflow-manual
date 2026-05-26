@@ -1,7 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "almond",
-  "name": "DeepFlow",
+  "name": "Deepflow",
+  "logo": {
+    "light": "/logo/deepflow.svg",
+    "dark": "/logo/deepflow.svg"
+  },
   "colors": {
     "primary": "#2563EB",
     "light": "#3B82F6",
@@ -38,6 +42,17 @@
                 "group": "부가 안내",
                 "pages": [
                   "ko/considerations"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "릴리즈 노트",
+            "groups": [
+              {
+                "group": "릴리즈 노트",
+                "pages": [
+                  "ko/release-notes"
                 ]
               }
             ]
