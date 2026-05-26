@@ -1,0 +1,99 @@
+---
+title: "Business Intelligence (BI)"
+description: "Analyze category-level shipment, sales, and inventory trends and forecast inventory anomalies"
+---
+
+## Business Intelligence overview
+
+Where the Demand Forecasting and Inventory Management modules work at the SKU level, Business Intelligence gives you a category-level view of the macro picture.
+
+You can review historical shipments, sales, and inventory trends, and use demand forecasts to project where each metric is headed.
+
+<Note>
+  The **Sales** tab is only available if you have item-price data.
+</Note>
+
+## Shipment analysis and forecast
+
+<Frame>
+  <img src="/images/bi/01.png" alt="Shipment analysis screen" />
+</Frame>
+
+The **Current** tab shows shipment performance up through last month.
+
+- Pick a year in the shipment trend analysis.
+- Compare monthly shipment changes alongside year-over-year (YoY) and month-over-month (MoM) growth rates.
+- Click any category to isolate it.
+
+<Note>
+  Only the top 5 categories by share are displayed.
+</Note>
+
+For more detail, the monthly share-by-category breakdown shows the items with the highest and lowest shipments each month.
+
+The **Forecast** tab uses demand forecasts to provide:
+
+- Forecasted monthly shipments by category
+- Best and worst-performing items (Top 5 each) per month
+
+This helps you pinpoint categories or time points with high shipment volatility, investigate the drivers, and plan a response.
+
+## Sales analysis and forecast
+
+The **Current** tab shows sales performance through last month. Sales equals shipment volume multiplied by unit price, so high-priced items contribute relatively more.
+
+- Pick a year in the sales trend analysis.
+- Compare monthly sales changes alongside YoY and MoM growth.
+- Click any category to isolate it.
+
+<Note>
+  Only the top 5 categories by share are displayed.
+</Note>
+
+The monthly share-by-category sales breakdown reveals which items contribute the most and the least each month.
+
+The **Forecast** tab provides:
+
+- Forecasted monthly sales by category
+- Best and worst-performing items (Top 5 each) per month
+
+## Setting inventory management criteria
+
+<Frame>
+  <img src="/images/bi/02.png" alt="Inventory criteria configuration" />
+</Frame>
+
+Configure the thresholds DeepFlow uses to detect inventory anomalies.
+
+**Key settings**
+
+- **Stockout threshold (units)**: Items at or below this quantity are considered stocked out.
+- **Shortage threshold (days)**: Items whose projected days-to-deplete fall below this number are flagged as low stock.
+- **Overstock threshold (days)**: Items with projected days-to-deplete above this number are flagged as overstocked.
+- **Watch categories**: Filter the view to just the categories you care about.
+
+<Note>
+  You can also define shortage and overstock sub-bands. Each must stay within its parent threshold. With these bands, you can prioritize the items that most urgently need a response.
+</Note>
+
+## Inventory analysis
+
+The **Current** tab shows inventory through last month.
+
+- Pick a year in the inventory trend analysis.
+- Compare monthly inventory changes alongside YoY and MoM growth.
+- Click any category to isolate it.
+- Apply the configured thresholds to see the share of stockouts, shortages, and overstock for the current month.
+- For this month's opening inventory, review the stockout item list and compare against each item's recent sales trend to determine whether the stockout is unexpected.
+
+The **Inventory turnover analysis** lets you pick a month and review turnover by category and item. Using a trailing 3- or 6-month window, you can check operational efficiency.
+
+<Note>
+  Inventory turnover is computed as shipments divided by average inventory.
+</Note>
+
+## Forecasting inventory anomalies
+
+Apply the configured thresholds to see the share of stockouts, shortages, and overstock for the current month.
+
+Using forecast-derived days-to-deplete, DeepFlow surfaces the share of shortage and overstock, plus the item list. If you've defined sub-bands, you can see which items belong to each band and respond to the most urgent ones first.

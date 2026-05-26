@@ -1,0 +1,114 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "almond",
+  "name": "DeepFlow",
+  "colors": {
+    "primary": "#2563EB",
+    "light": "#3B82F6",
+    "dark": "#1D4ED8"
+  },
+  "navigation": {
+    "languages": [
+      {
+        "language": "ko",
+        "default": true,
+        "tabs": [
+          {
+            "tab": "사용자 가이드",
+            "groups": [
+              {
+                "group": "시작하기",
+                "pages": [
+                  "ko/index"
+                ]
+              },
+              {
+                "group": "메뉴별 가이드",
+                "pages": [
+                  "ko/forecast",
+                  "ko/inventory",
+                  "ko/bi",
+                  "ko/mi",
+                  "ko/dataset",
+                  "ko/sop",
+                  "ko/users"
+                ]
+              },
+              {
+                "group": "부가 안내",
+                "pages": [
+                  "ko/considerations"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "tabs": [
+          {
+            "tab": "User Guide",
+            "groups": [
+              {
+                "group": "Getting started",
+                "pages": [
+                  "en/index"
+                ]
+              },
+              {
+                "group": "Menu guides",
+                "pages": [
+                  "en/forecast",
+                  "en/inventory",
+                  "en/bi",
+                  "en/mi",
+                  "en/dataset",
+                  "en/sop",
+                  "en/users"
+                ]
+              },
+              {
+                "group": "Additional notes",
+                "pages": [
+                  "en/considerations"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "문의하기",
+        "href": "http://impactive-ai.com/contact-us"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "지금 시작하기",
+      "href": "https://impactive-ai.com/"
+    }
+  },
+  "contextual": {
+    "options": [
+      "assistant",
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
+  },
+  "footer": {
+    "socials": {
+      "website": "https://impactive-ai.com"
+    }
+  }
+}

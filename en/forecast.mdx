@@ -1,0 +1,129 @@
+---
+title: "Demand Forecasting"
+description: "Predict six months of demand for each item and review accuracy and AI insights"
+---
+
+## Demand forecasting overview
+
+Demand forecasting is the core capability of DeepFlow. Because demand directly affects sales, production, and inventory, you need to predict it carefully and respond accordingly.
+
+DeepFlow uses historical data and external variables to provide a six-month demand forecast for each item. For every item, you can see the demand pattern, expected volume, and the factors that influence demand.
+
+## Searching and selecting an item
+
+<Frame>
+  <img src="/images/forecast/01.png" alt="Item search panel" />
+</Frame>
+
+<Steps>
+  <Step title="Enter a search term">
+    In the **Item code / name search** field at the top of the screen, enter a search term. You can search by item code, name, category, registration date, and any other column.
+  </Step>
+  <Step title="Select an item">
+    Pick the item you want to analyze from the result list.
+  </Step>
+</Steps>
+
+## Reviewing predictions and accuracy in the grid
+
+<Frame>
+  <img src="/images/forecast/02.png" alt="Forecast grid" />
+</Frame>
+
+The grid surfaces key information for each item at a glance.
+
+**Available information**
+
+- **Accuracy**: Calculated from the difference between predicted and actual demand over the last 1–6 months.
+- **Predicted sales volume**: Forecasted demand for the current month plus the next six months.
+- **Change rate**: Variation between last month's actual demand and this month's predicted demand.
+
+<Note>
+  Accuracy is computed using **MAPE** (Mean Absolute Percentage Error). For example, a MAPE of 10% means the prediction differs from actual demand by 10% on average, and DeepFlow displays this as 90% accuracy (100 − MAPE).
+</Note>
+
+**Two ways to inspect the table**
+
+<Steps>
+  <Step title="Browse directly in the table">
+    Click the item you want to inspect.
+    <Note>
+      You can drag and drop column headers to reorder them — your order is saved. Click a column name to toggle ascending or descending sort.
+    </Note>
+  </Step>
+  <Step title="Download as CSV">
+    Use the download button to export the grid as a CSV file.
+    <Note>
+      The CSV mirrors exactly what is visible in the grid. If a filter is active and only some items are visible, only those rows are exported.
+    </Note>
+  </Step>
+</Steps>
+
+## Analyzing past and forecast values in the chart
+
+<Frame>
+  <img src="/images/forecast/03.png" alt="Forecast chart" />
+</Frame>
+
+Compare historical sales with the next six months of forecasted demand.
+
+- Hover over any point to view the historical demand (gray) and the predicted demand (blue).
+- In the forecast region, an error band is overlaid based on the current cycle's prediction.
+
+<Tip>
+  Click **Show past predictions** to see the values that were predicted at earlier points in time. Because predictions are updated every cycle, comparing past predictions helps you gauge prediction volatility.
+</Tip>
+
+The **monthly chart** view compares the last three years of data side by side with the forecast, letting you check:
+
+- Seasonality of demand
+- Year-over-year demand shifts
+- Consistency between actual results and predictions
+
+## Reviewing the AI-generated summary
+
+<Frame>
+  <img src="/images/forecast/04.png" alt="Insight summary screen" />
+</Frame>
+
+DeepFlow uses a generative AI model (LLM) to produce a combined analysis of historical data and forecasts. This summary covers past demand patterns, the drivers behind the forecast, and the risks and opportunities each team can act on.
+
+<Note>
+  All customer data is processed encrypted inside Google Cloud Platform (GCP) certified-secure environments. Data is never sent outside DeepFlow or used to train models, and it is not persisted beyond the temporary processing required for LLM inference.
+</Note>
+
+<Steps>
+  <Step title="Select an item and request analysis">
+    Pick the item you want to analyze and click **Run insight analysis**.
+    <Note>
+      You can run the analysis up to 1,000 times per month for free. Contact us if you need a higher quota.
+    </Note>
+  </Step>
+  <Step title="Wait for completion">
+    When the analysis is done, the status changes to **Analysis complete** and you can open the detailed write-up.
+  </Step>
+</Steps>
+
+### Past demand diagnosis
+
+Based on the last three years of data for each item:
+
+- Compare annual demand patterns to see the item's seasonality.
+- Compare year-over-year demand to determine whether the trend is rising or falling.
+- Compare those patterns against the most recent three months to confirm that the previous trend still holds.
+
+### Forward-looking outlook
+
+Using the next six months of predictions, you can examine the forecast pattern and the drivers behind it — including how strongly each factor correlates with the forecast.
+
+<Note>
+  This summary is generated from the **Factor analysis** tab. To inspect the drivers at a specific time point, open the Factor analysis tab and select that time point.
+</Note>
+
+### Risk and opportunity detection
+
+Based on demand and inventory forecasts, DeepFlow suggests risks and opportunities to consider. You'll see angles relevant to sales, marketing, and SCM teams, along with concrete actions to take.
+
+<Note>
+  These recommendations do not encode your company's internal decision processes, so they may not be directly actionable. Treat them as a starting point to broaden your thinking rather than a final answer.
+</Note>
