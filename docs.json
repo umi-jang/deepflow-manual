@@ -11,6 +11,23 @@
     "light": "#3B82F6",
     "dark": "#1D4ED8"
   },
+  "thumbnails": {
+    "background": "/images/og-background.png"
+  },
+  "fonts": {
+    "heading": {
+      "family": "Pretendard",
+      "source": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/variable/woff2/PretendardVariable.woff2",
+      "format": "woff2",
+      "weight": 700
+    },
+    "body": {
+      "family": "Pretendard",
+      "source": "https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard/dist/web/variable/woff2/PretendardVariable.woff2",
+      "format": "woff2",
+      "weight": 400
+    }
+  },
   "navigation": {
     "languages": [
       {
