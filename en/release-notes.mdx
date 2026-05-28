@@ -1,0 +1,58 @@
+---
+title: "Release Notes"
+description: "New features, improvements, and changes in Deepflow Forecast"
+mode: "center"
+---
+
+<div className="release-timeline">
+  <div className="release-entry">
+    <div className="release-date">2026 — 05 — 26</div>
+
+    <h3 className="release-title">v3.0 New Release</h3>
+
+    <div className="release-subtitle">Introducing the new Mintlify-based user guide site</div>
+
+    <div className="release-body">
+      <p>In this release, we have completely revamped the Deepflow Forecast user guide as a Mintlify-based docs site. Both Korean and English are supported, and you can find menu-specific guides and release notes all in one place.</p>
+
+      <p><strong>New features</strong></p>
+      <ul>
+        <li>Bilingual support (Korean / English)</li>
+        <li>Seven menu-specific guides (Forecast, Inventory, BI, MI, Dataset, S&OP, Users)</li>
+        <li>Release notes timeline</li>
+      </ul>
+
+      <p><strong>Improvements</strong></p>
+      <ul>
+        <li>Added page context menu (send directly to ChatGPT / Claude / Cursor, etc.)</li>
+        <li>Unified visual design (Mintlify almond theme + brand colors)</li>
+      </ul>
+    </div>
+
+    <div className="release-related">
+      <span className="release-related-label">Related guides</span>
+      <a href="/en/forecast">Forecast</a>
+      <a href="/en/inventory">Inventory</a>
+      <a href="/en/sop">S&OP</a>
+    </div>
+
+    <div className="release-image">
+      <img src="/images/forecast/02.png" alt="Forecast screen" />
+    </div>
+  </div>
+</div>
+
+{/*
+To add a new release, copy the entire <div className="release-entry"> block above
+and place the latest entry at the top. Required fields:
+
+  release-date     — Release date
+  release-title    — Title (version name)
+  release-subtitle — Subtitle (one-line summary)
+  release-body    — Body (write in HTML: <p>, <ul><li>, <strong>, etc.)
+  release-related  — Related guide links
+  release-image   — Image (optional)
+
+Note: Mintlify MDX does not support semantic tags like <article>, <time>, <section>.
+Use <div> for all of them.
+*/}
