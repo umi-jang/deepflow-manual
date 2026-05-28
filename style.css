@@ -152,6 +152,11 @@ body:has(.release-notes-page) main > article {
   border-top: 1px dashed #e5e7eb;
 }
 
+.release-card-links > p {
+  display: contents;
+  margin: 0;
+}
+
 .release-card-links-label {
   font-size: 0.8125rem;
   font-weight: 600;
