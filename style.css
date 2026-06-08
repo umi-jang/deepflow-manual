@@ -110,6 +110,22 @@ body:has(.release-notes-page) main > article {
   color: #92400e;
 }
 
+/* Announcement tags */
+.release-tag-info {
+  background: #e0f2fe;
+  color: #075985;
+}
+
+.release-tag-maintenance {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.release-tag-event {
+  background: #f3e8ff;
+  color: #6b21a8;
+}
+
 .release-card-title {
   font-size: 1.375rem;
   font-weight: 700;
@@ -227,6 +243,21 @@ html.dark .release-tag-improvement {
 html.dark .release-tag-fix {
   background: #78350f;
   color: #fde68a;
+}
+
+html.dark .release-tag-info {
+  background: #0c4a6e;
+  color: #bae6fd;
+}
+
+html.dark .release-tag-maintenance {
+  background: #7f1d1d;
+  color: #fecaca;
+}
+
+html.dark .release-tag-event {
+  background: #581c87;
+  color: #e9d5ff;
 }
 
 /* Responsive */

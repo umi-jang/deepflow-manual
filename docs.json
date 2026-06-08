@@ -73,6 +73,17 @@
                 ]
               }
             ]
+          },
+          {
+            "tab": "공지사항",
+            "groups": [
+              {
+                "group": "공지사항",
+                "pages": [
+                  "ko/notice"
+                ]
+              }
+            ]
           }
         ]
       },
@@ -115,6 +126,17 @@
                 "group": "Release Notes",
                 "pages": [
                   "en/release-notes"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Announcements",
+            "groups": [
+              {
+                "group": "Announcements",
+                "pages": [
+                  "en/notice"
                 ]
               }
             ]
