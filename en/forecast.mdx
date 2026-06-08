@@ -16,20 +16,28 @@ DeepFlow uses historical data and external variables to provide a **six-month de
 In the **Item code / name search** field at the top of the screen, enter a search term. You can search by item code, name, category, registration date, and any other column.
 
 <Frame>
-  <img src="/images/forecast/01.png" alt="Item search panel" />
+  <img src="/images/forecast/01-search.png" alt="Item code/name search field" />
 </Frame>
 
-Pick the item you want to analyze from the result list. You can search by item code/name, or pick from the top, mid, and sub-category hierarchy.
+Pick the item you want to analyze from the result list.
+
+<Frame>
+  <img src="/images/forecast/02-item-search.png" alt="Item search results" />
+</Frame>
+
+<Frame>
+  <img src="/images/forecast/03-category.png" alt="Top, mid, and sub-category selector" />
+</Frame>
 
 ---
 
 ## Reviewing predictions and accuracy in the grid
 
-<Frame>
-  <img src="/images/forecast/02.png" alt="Forecast grid" />
-</Frame>
-
 The grid shows information for each item at a glance.
+
+<Frame>
+  <img src="/images/forecast/04-grid.png" alt="Forecast grid" />
+</Frame>
 
 **Available information**
 
@@ -49,6 +57,10 @@ The grid shows information for each item at a glance.
 
 There are two ways to inspect the table contents: pick an item to view directly in the table, or download the data as a CSV file.
 
+<Frame>
+  <img src="/images/forecast/05-csv-download.png" alt="CSV download button" />
+</Frame>
+
 <Note>
   The CSV mirrors exactly what is visible in the grid. If a filter is active and only some items are visible, only those rows are exported.
 </Note>
@@ -57,13 +69,13 @@ There are two ways to inspect the table contents: pick an item to view directly 
 
 ## Analyzing past and forecast values in the chart
 
-<Frame>
-  <img src="/images/forecast/03.png" alt="Forecast chart" />
-</Frame>
-
 Compare historical shipments with the next six months of forecasted demand.
 
 Hover any point to see forecasted demand and actual shipment at the top. In the forecast region, an error band is overlaid based on the current cycle's prediction.
+
+<Frame>
+  <img src="/images/forecast/06-chart.png" alt="Forecast chart" />
+</Frame>
 
 - Use the **[Previous 12 months / 6 months / 3 months]** buttons to choose the historical range to view.
 - Click legend buttons at the top of the chart (Actual shipment, 2025-10, 2025-11, etc.) to show or hide each line.
@@ -78,12 +90,24 @@ You can also switch to the **Monthly chart** view. Compare three years of histor
 2. Year-over-year demand changes
 3. Consistency between actual results and predictions
 
+<Frame>
+  <img src="/images/forecast/07-monthly-chart.png" alt="Monthly chart view" />
+</Frame>
+
 **[▶︎ Start]** and **[◀︎ End]** mark the start and end points of the forecast region (shown in blue). Click legend buttons at the top of the chart (2023, 2024, Forecast, etc.) to show or hide each line.
 
 Below the chart, the table shows historical sales total, forecast total, the item count in the category, and the hit rate.
 
+<Frame>
+  <img src="/images/forecast/08-category-table.png" alt="Category or item selection table" />
+</Frame>
+
 - **Category selected**: Aggregated sales and forecast for the items in that category.
 - **Item selected**: Sales and forecast for that item.
+
+<Frame>
+  <img src="/images/forecast/09-hit-rate.png" alt="Hit rate display" />
+</Frame>
 
 <Note>
   Hit rate = sales ÷ forecast
@@ -93,10 +117,6 @@ Below the chart, the table shows historical sales total, forecast total, the ite
 
 ## Reviewing the AI-generated summary
 
-<Frame>
-  <img src="/images/forecast/04.png" alt="Insight summary screen" />
-</Frame>
-
 DeepFlow uses a generative AI model (LLM) to produce a combined analysis of historical data and forecasts. This summary covers past demand patterns and the drivers behind the forecast, and detects additional risks and opportunities so each team can plan a response.
 
 <Note>
@@ -105,6 +125,9 @@ DeepFlow uses a generative AI model (LLM) to produce a combined analysis of hist
 
 <Note>
   If the four tabs (Past demand diagnosis, etc.) do not appear, turn off the aggregation toggle above the demand-forecast table and re-select an item.
+  <Frame>
+    <img src="/images/forecast/10-aggregate-toggle.png" alt="Aggregation toggle location" />
+  </Frame>
 </Note>
 
 ### Past demand diagnosis
@@ -115,9 +138,17 @@ Based on the last three years of data for each item:
 - Compare year-over-year demand to determine whether the trend is rising or falling.
 - Compare against the most recent three-month demand trend to confirm the previous patterns still hold.
 
+<Frame>
+  <img src="/images/forecast/11-past-demand.png" alt="Past demand diagnosis screen" />
+</Frame>
+
 ### Forward-looking outlook
 
 Using the current month and the next six months of forecasts, examine the forecast pattern and the drivers behind it. In particular, see how each driver correlates with the item's forecast and how strongly it contributes.
+
+<Frame>
+  <img src="/images/forecast/12-future-demand.png" alt="Forward-looking outlook screen" />
+</Frame>
 
 <Note>
   This summary is generated from the **Factor analysis** tab. To see the drivers behind a specific time point, open the Factor analysis tab and select that time point.
@@ -125,7 +156,17 @@ Using the current month and the next six months of forecasts, examine the foreca
 
 ### Risk and opportunity detection
 
-Based on demand and inventory forecasts, DeepFlow suggests risks and opportunities to consider. Click the tab buttons at the top to see angles relevant to sales, marketing, and SCM teams, along with concrete actions to take.
+Based on demand and inventory forecasts, DeepFlow suggests risks and opportunities to consider.
+
+<Frame>
+  <img src="/images/forecast/13-risk-opportunity.png" alt="Risk and opportunity detection screen" />
+</Frame>
+
+Click the tab buttons at the top to see angles relevant to sales, marketing, and SCM teams, along with concrete actions to take.
+
+<Frame>
+  <img src="/images/forecast/14-action-plans.png" alt="Department-specific action plans" />
+</Frame>
 
 <Note>
   These recommendations do not encode your company's internal decision processes, so they may not be directly actionable. Treat them as a starting point to broaden your thinking rather than a final answer.
@@ -137,3 +178,7 @@ See which external factors are contributing most to the demand forecast.
 
 - Use the dropdown to pick a date and review factor analysis from previous cycles.
 - Click a factor name to view the last three months of that factor's predicted values as a chart.
+
+<Frame>
+  <img src="/images/forecast/15-factor-analysis.png" alt="Factor analysis screen" />
+</Frame>

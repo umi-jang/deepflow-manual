@@ -10,13 +10,18 @@ Where the Demand Forecasting and Inventory Management modules work at the SKU le
 The screen has four sections: **Inventory status, Sales status and direction, Accuracy monitoring, and Inventory turnover**. Click any of the indicator cards in each section to drill down into item-level detail, trace the source of a number, and quickly reach the items that need a response.
 
 <Frame>
-  <img src="/images/bi/01.png" alt="Business Intelligence main screen" />
+  <img src="/images/bi/01-overview.png" alt="Business Intelligence main screen" />
 </Frame>
 
 Business Intelligence stores monthly analysis snapshots, so changing the reference month brings back the inventory, sales, accuracy, and turnover view exactly as it was at that point in time.
 
 1. **Reference month**: Select the analysis time point. Defaults to the most recently created page.
 2. **Analysis basis**: Category filter applied to the entire BI view. Selecting specific categories narrows every chart to those categories.
+
+<Frame>
+  <img src="/images/bi/02-filter.png" alt="Analysis basis category filter" />
+</Frame>
+
 3. **Favorites filter toggle**: When enabled, restricts results to items you have favorited. While enabled, the analysis-basis filter is disabled — the two filters cannot be used simultaneously.
 4. **Reset**: Returns reference month, analysis basis, and favorites filter to defaults. The view falls back to the most recent page for all items.
 
@@ -36,6 +41,10 @@ This section is built from the latest inventory data, your inventory management 
 
 The top of the section groups cards around three themes: current inventory holdings, shortage, and overstock. You can check active SKU count and inventory asset value, shortage and overstock SKU counts, and estimated stockout loss and excess holding costs. Each card shows month-over-month and year-over-year changes so you can quickly gauge the direction of inventory size.
 
+<Frame>
+  <img src="/images/bi/03-inventory-cards.png" alt="Inventory status indicator cards" />
+</Frame>
+
 Cards are split into \[Item] tags (showing item counts) and \[Sales] tags (showing monetary amounts). Click a card to see the detail table. Shortage and overstock thresholds can be changed via the **⚙️ Settings** panel in the top-right.
 
 - **Daily update | Updated: YYYY-MM-DD**: Date of the inventory data currently reflected in BI
@@ -52,6 +61,10 @@ Cards are split into \[Item] tags (showing item counts) and \[Sales] tags (showi
 
 Shows average days-to-deplete, shortage SKU count, and overstock SKU count at the sub-category level. **Healthy (green), Caution (yellow), Risk (red)** colors apply based on the ratio of shortage and overstock items, helping you quickly identify categories where action is most urgent.
 
+<Frame>
+  <img src="/images/bi/04-inventory-heatmap.png" alt="Inventory status heatmap" />
+</Frame>
+
 1. **↗️ (Open panel) button**: Click the panel-open icon next to a sub-category name to view current stock, projected stockout date, and inventory status for every item in that sub-category.
 2. **Avg. days-to-deplete (days)**: Mean projected days-to-deplete across the category's items
 3. **Shortage items (count)**: Count of shortage-classified items and ratio (%) of total items
@@ -63,9 +76,17 @@ Shortage and overstock thresholds can be changed via the **⚙️ Settings** pan
 
 Stacked bar chart showing the count of shortage, healthy, and overstock items over the last six months. Switch between monthly and weekly granularity to check whether anomalies are trending up or down.
 
+<Frame>
+  <img src="/images/bi/05-inventory-trend.png" alt="Inventory status trend" />
+</Frame>
+
 ### Top 5 shortage / overstock items
 
 Lists the top 5 items in shortage and overstock respectively. Current stock, projected monthly shipment, daily average shipment, and days-to-deplete are shown side by side to help you judge which items are most urgent.
+
+<Frame>
+  <img src="/images/bi/06-top5.png" alt="Top 5 shortage and overstock items" />
+</Frame>
 
 ---
 
@@ -85,6 +106,10 @@ The section is built from daily sales results, sales plans, and demand forecast 
 
 Cards are split into \[Quantity] tags (sales and forecast quantities) and \[Sales] tags (monetary amounts). Click a card to see the detail table.
 
+<Frame>
+  <img src="/images/bi/07-sales-cards.png" alt="Sales status indicator cards" />
+</Frame>
+
 - **Daily update | YYYY-MM-DD**: Date of the shipment data currently reflected in BI
 - \[Quantity] tags
   - **Month attainment**: Cumulative sales from day 1 to today as a ratio of the monthly sales plan (month-to-date sales ÷ monthly sales plan)
@@ -103,6 +128,10 @@ Cards are split into \[Quantity] tags (sales and forecast quantities) and \[Sale
 
 Expands revenue (or quantity) composition down to category, sub-category, and item level. Toggle between revenue and quantity views to visually identify which areas are driving sales.
 
+<Frame>
+  <img src="/images/bi/08-sales-share.png" alt="Sales share chart" />
+</Frame>
+
 1. **Box size**: The share of total sales the item or category represents. Larger means greater contribution to revenue or quantity.
 2. **Box color intensity**: Encodes revenue scale via shade depth. The right-side gradient bar maps shade to amount — darker means larger.
 3. **Hierarchy and view comparison**: Boxes nest in category → sub-category → item order so you can see which item in which category is driving the share. Items whose box size changes dramatically between the revenue and quantity views are a signal that their unit price diverges from the average (high-priced or high-volume low-margin).
@@ -110,6 +139,10 @@ Expands revenue (or quantity) composition down to category, sub-category, and it
 ### S&OP implications
 
 Compare last month's actuals, current-month forecast, and the six-month outlook at the sub-category level in a single table. Forecast attainment and next-month direction are shown together so you can judge categories that are underperforming vs. plan or where demand is bending downward.
+
+<Frame>
+  <img src="/images/bi/09-sop-implications.png" alt="S&OP implications table" />
+</Frame>
 
 The table is collapsed to top-level categories; click a row to expand to the sub-category level.
 
@@ -130,6 +163,10 @@ The section is computed by comparing last month's actuals against the most recen
 
 Summarizes how close the prior month's demand forecast and sales plan came to actuals, expressed as accuracy (%).
 
+<Frame>
+  <img src="/images/bi/10-accuracy-cards.png" alt="Accuracy monitoring indicator cards" />
+</Frame>
+
 1. **Monthly update | Updated: YYYY-MM-DD**: Date the prior-month accuracy was calculated. Since the prior month's actuals are finalized early the following month, the update date always lands in the month after the card's reference month.
 2. **YYYY MM demand forecast accuracy**: Average per-item accuracy of last month's forecast vs. actuals. Closer to 100% means the forecast was closer to actuals. (Accuracy = 1 − |sales − forecast| ÷ sales)
 3. **YYYY MM sales plan accuracy**: Average per-item accuracy of last month's sales plan vs. actuals. Compared against forecast accuracy, you can tell whether AI prediction or the internal plan came closer to actuals. (Accuracy = 1 − |sales − plan| ÷ sales)
@@ -140,6 +177,10 @@ Summarizes how close the prior month's demand forecast and sales plan came to ac
 
 Click a card to see per-item accuracy and error rate. The bottom-right **[Details ↗️]** button opens the per-item trend across the last three months. Use this to identify items where the forecast tends to over- or underestimate actuals and to prioritize bias-heavy items for correction in the next planning cycle.
 
+<Frame>
+  <img src="/images/bi/11-accuracy-detail.png" alt="Per-item accuracy detail" />
+</Frame>
+
 <Note>
   Per-item accuracy = 1 − |sales − plan| ÷ sales<br />
   Card accuracy (average across items) = sum of per-item accuracy ÷ item count
@@ -149,9 +190,17 @@ Click a card to see per-item accuracy and error rate. The bottom-right **[Detail
 
 Monthly comparison of total forecast, sales plan, and actual sales quantities across all items. Hover the chart to see quantities along with forecast and plan accuracy vs. actual in the tooltip.
 
+<Frame>
+  <img src="/images/bi/12-forecast-actual.png" alt="Forecast vs. actual trend chart" />
+</Frame>
+
 ### Forecast bias direction trend
 
 Shows the direction in which the demand forecast and sales plan tend to deviate from actuals, month by month. Positive (+) against the 0% baseline indicates overestimation (forecast/plan above actual); negative (−) indicates underestimation. Hover to view the error rate in the tooltip.
+
+<Frame>
+  <img src="/images/bi/13-bias-trend.png" alt="Forecast bias direction trend chart" />
+</Frame>
 
 ---
 
@@ -171,6 +220,10 @@ This section is built from the prior month's sales actuals and inventory data.
 
 Shows prior-month turnover for all items, the top 20%, and the bottom 20%. Click a card to see per-item detail for that segment.
 
+<Frame>
+  <img src="/images/bi/14-turnover-cards.png" alt="Inventory turnover indicator cards" />
+</Frame>
+
 1. **YYYY MM inventory turnover**: Aggregate turnover across all items. Higher means inventory turns over quickly; lower indicates potential stagnation.
 2. **Top 20% items inventory turnover**: Average turnover of the top 20% by turnover rate. A fast-moving group where you should also check for shortage risk.
 3. **Bottom 20% items inventory turnover**: Average turnover of the bottom 20% by turnover rate. A slow-moving group; check for long-term stagnation or obsolete stock.
@@ -178,6 +231,10 @@ Shows prior-month turnover for all items, the top 20%, and the bottom 20%. Click
 ### Inventory turnover trend
 
 Shows turnover change by category vs. the prior month. Read the sparkline and MoM together to spot categories whose turnover is rising or falling quickly, and proactively adjust purchasing or production plans.
+
+<Frame>
+  <img src="/images/bi/15-turnover-trend.png" alt="Inventory turnover trend table" />
+</Frame>
 
 1. **Month before last · Last month**: Monthly turnover for the category
 2. **MoM**: How much last month's turnover changed vs. the month before. MoM = (last month − month before last) ÷ month before last
