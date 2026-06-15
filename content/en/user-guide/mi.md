@@ -1,0 +1,29 @@
+# Market Intelligence (MI)
+
+*Track historical volatility and short-term forecasts of external market indicators*
+
+## Market Intelligence overview
+
+Accurate demand forecasting requires more than item-level data — you also need a view of the broader market. Alongside your internal analytics, DeepFlow surfaces external market signals so you can take a more complete perspective.
+
+Demand swings within a category or industry are typically driven by a handful of key factors. DeepFlow shows the historical volatility and forward forecasts for these factors so you can analyze their impact on your industry and product lines from multiple angles.
+
+Combine the historical trends and the forward outlook of major indicators to gauge how demand for a category or product line might shift.
+
+## Choosing your keywords of interest
+
+The first time you open Market Intelligence, you'll be asked to choose keywords of interest as part of the initial setup. The keywords you pick determine the default variables selected for you.
+
+> **Note:** This initial selection is just for setting up the screen — you can change your keywords at any time afterwards.
+
+You can also search for new variables to follow or unfollow existing ones.
+
+## Inspecting variable trends
+
+Select any variable to see how it moved in the past and the short-term forward forecast.
+
+- Depending on the data's collection cadence, pick a **weekly** or **monthly** view.
+- Use the moving-average overlay to focus on the macro trend.
+- Use the candlestick chart to inspect market volatility.
+
+> **Note:** Forecasts are provided for a subset of major indicators only (such as FX rates and oil prices).
