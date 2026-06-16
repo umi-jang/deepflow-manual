@@ -36,6 +36,45 @@ body:has(.release-notes-page) main > article {
   padding: 1rem 0 4rem;
 }
 
+.release-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 4.5rem 2rem;
+  border: 1px dashed #e5e7eb;
+  border-radius: 14px;
+  background: #fafafa;
+}
+
+.release-empty-title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: #374151;
+  margin: 0;
+}
+
+.release-empty-desc {
+  font-size: 0.9375rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+html.dark .release-empty {
+  border-color: #27272a;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+html.dark .release-empty-title {
+  color: #e5e7eb;
+}
+
+html.dark .release-empty-desc {
+  color: #9ca3af;
+}
+
 .release-card {
   position: relative;
   border: 1px solid #e5e7eb;
