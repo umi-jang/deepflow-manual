@@ -51,6 +51,7 @@
                   "ko/inventory",
                   "ko/bi",
                   "ko/mi",
+                  "ko/materials",
                   "ko/dataset",
                   "ko/sop",
                   "ko/users"
