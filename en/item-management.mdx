@@ -1,0 +1,240 @@
+---
+title: "Item Management"
+description: "Manage item details and set which items and forecast groups feed demand forecasting"
+---
+
+Edit item attributes, manage custom attributes and assignees, set discontinuation and active status, and group items that sell in sequence into a forecast group. This guide walks through each feature by real usage scenario.
+
+<Frame>
+  <img src="/images/item-management/01-overview.png" alt="Item management screen" />
+</Frame>
+
+## Key terms
+
+- **Active / Inactive** : Determines whether the item appears on the demand forecast screen. **An active item is shown on the forecast screen even if it has no forecast value.** An inactive item is hidden even if a forecast value exists.
+- **Discontinued / Scheduled for discontinuation** : Marks that an item stops selling from a certain point. **Active status and discontinuation status are independent of each other.** An item stays active even after its discontinuation date passes, and an active discontinued item still appears in demand forecasting.
+- **Forecast group** : Groups similar items whose past sales flow needs to be viewed continuously — for example after a product renewal or upgrade. Only the representative item appears in the forecast menu, and the shipment volumes of the other member items are aggregated into it.
+- **New product** : An item whose release date is within the "new product" threshold (in months). A "New" tag is automatically shown next to its name.
+
+## [1] Searching items and viewing details
+
+Find items with search and filters, then click a row to view its details.
+
+<Frame>
+  <img src="/images/item-management/02-search.png" alt="Item search screen" />
+</Frame>
+
+<Steps>
+  <Step title="Search by item code or name">
+    Enter part of an item code or name in the search box. Items containing the term appear in the list.
+  </Step>
+  <Step title="Narrow with filters">
+    Narrow results with the category filter (major/middle/minor category) and the active, discontinuation, and new-product dropdowns. Each dropdown allows a single option, and the search term and selected filters all apply together.
+  </Step>
+  <Step title="Sort">
+    Click a column header to sort by that column; click the same header again to toggle ascending↔descending.
+  </Step>
+  <Step title="Open the detail panel">
+    Click an item row to open the detail panel on the right.
+  </Step>
+</Steps>
+
+## [2] Editing item details
+
+Edit and save an item's attribute values in the detail panel.
+
+<Frame>
+  <img src="/images/item-management/03-edit.png" alt="Edit item details" />
+</Frame>
+
+<Steps>
+  <Step title="Open the item to edit">
+    Click an item row in the list to open the detail panel.
+  </Step>
+  <Step title="Edit item details">
+    Edit the item name, release date, discontinuation date, category, assignees, and more. The item code and registration date are read-only.
+    - For categories, changing the major category updates the middle category, and changing the middle category updates the minor category accordingly.
+    - The release date affects new-product classification. An item whose release date is within the new-product threshold shows a "New" tag next to its name; once the threshold passes, the tag disappears automatically.
+  </Step>
+  <Step title="Save / Cancel">
+    Click **Save** to show the "Saved." toast and apply the changes to the list and panel. Click **Cancel** to discard the changes and keep the existing values.
+  </Step>
+</Steps>
+
+## [3] Managing custom attributes
+
+Define your own information fields for items, and control their list visibility and names.
+
+<Frame>
+  <img src="/images/item-management/04-user-attributes.png" alt="Custom attribute management modal" />
+</Frame>
+
+<Steps>
+  <Step title="Open the attribute management modal">
+    Click **Manage attributes** on the right of the action bar. This modal has no separate save button — every change applies immediately.
+  </Step>
+  <Step title="Add a custom attribute">
+    Click **Add custom attribute**, enter an attribute code (lowercase letters, numbers, and underscores only) and a display name, then click **Add**. Empty or duplicate codes are rejected.
+  </Step>
+  <Step title="Rename an attribute">
+    Click the attribute name, type a new name, and press Enter or click outside the field. The new name is reflected in the list table header, the detail panel field label, and the attribute management list. (The attribute code does not change.)
+  </Step>
+  <Step title="Toggle list visibility">
+    Turning on an attribute's "Show in list" toggle immediately adds its column to the item table; turning it off removes it. Required attributes (item code, item name) are locked and always on.
+  </Step>
+  <Step title="Delete a custom attribute">
+    Click the delete (✕) on an attribute row to open a confirmation modal. Clicking **Delete** removes the attribute definition and its value on every item — this cannot be undone.
+  </Step>
+</Steps>
+
+## [4] Assigning owners
+
+Assign and manage multiple owners per item.
+
+<Frame>
+  <img src="/images/item-management/05-assignee.png" alt="Assign owners" />
+</Frame>
+
+<Steps>
+  <Step title="Add an owner">
+    Click **Add owner** in the detail panel to open a dropdown. Selecting a user adds them as a "Name (login ID)" chip (multiple owners allowed).
+  </Step>
+  <Step title="Remove an owner and save">
+    Click the ✕ on an owner chip to remove them, then click **Save** to apply.
+  </Step>
+</Steps>
+
+## [5] Handling discontinuation
+
+Mark items that stop selling from a certain point as discontinued. Discontinuation is separate from active status — discontinuing an item keeps it active.
+
+<Frame>
+  <img src="/images/item-management/06-discontinue.png" alt="Discontinuation screen" />
+</Frame>
+
+<Steps>
+  <Step title="Discontinue a single item">
+    Enter a discontinuation date in the detail panel and click **Save**. If the date is in the future, the discontinuation status column shows a **Scheduled** badge with the date; if it is today or earlier, it shows a **Discontinued** badge.
+  </Step>
+  <Step title="Discontinue multiple items at once">
+    Check items in the list, then click **Set discontinuation**. Enter a date in the modal and click **Save** to apply the same discontinuation date to all selected items. (Existing dates are overwritten.)
+
+    <Frame>
+      <img src="/images/item-management/07-discontinue-bulk.png" alt="Bulk discontinuation modal" />
+    </Frame>
+  </Step>
+  <Step title="Undo discontinuation">
+    Clear the discontinuation date field in the detail panel and click **Save**; the status column returns to "—". Since discontinuation is a separate axis from active status, the active status is preserved.
+  </Step>
+</Steps>
+
+<Warning>
+  **Items are not automatically deactivated when their discontinuation date passes. An item that is discontinued but still active continues to appear in demand forecasting. What controls appearance in the forecast menu is the active/inactive status.**
+</Warning>
+
+## [6] Setting active status (include/exclude from forecasting)
+
+Control per item whether it appears on the demand forecast screen. Deactivating only hides it from the screen — it does not affect shipment-history aggregation.
+
+<Frame>
+  <img src="/images/item-management/08-active.png" alt="Active status screen" />
+</Frame>
+
+<Steps>
+  <Step title="Toggle a single item instantly">
+    Clicking the active/inactive toggle in the detail panel header applies immediately without saving, and the list status column updates. A single "Activated"/"Deactivated" entry is also recorded in the activity log.
+  </Step>
+  <Step title="Set multiple items at once">
+    Check items in the list, then click **Set active status**. Choose active or inactive in the modal and click **Save** to apply to the selected items in bulk. Items already in that state are ignored without change.
+
+    <Frame>
+      <img src="/images/item-management/09-active-bulk.png" alt="Bulk active status modal" />
+    </Frame>
+  </Step>
+</Steps>
+
+<Warning>
+  **For items in a forecast group, active status is set automatically by the representative designation (the representative item is active, member items are inactive), so the toggle is locked and they are excluded from bulk settings. Active/inactive settings apply only to items not belonging to a group.**
+</Warning>
+
+## [7] Managing the new-product threshold
+
+Items are automatically classified as new products based on their release date. You can adjust the threshold (in months).
+
+<Frame>
+  <img src="/images/item-management/10-new-product.png" alt="New-product threshold settings" />
+</Frame>
+
+<Steps>
+  <Step title="Check the New tag">
+    Items whose release date is within the new-product threshold (default 6 months) automatically show a "New" tag next to the item name in the list.
+  </Step>
+  <Step title="Adjust the retention period">
+    Click the settings icon on the new-product chip next to the status filter, enter the threshold in months, and click **Save**. Only values between 1 and 60 are allowed; otherwise a "Enter a number between 1 and 60" message appears. On save, the list is re-evaluated immediately and the New tags refresh. This threshold applies to all items at once.
+  </Step>
+</Steps>
+
+## [8] Creating and managing forecast groups
+
+After a renewal or upgrade, **highly similar/related items may sell in sequence under a changed name or code**. Grouping such items into a single forecast group lets you **train the model on uninterrupted past sales history and manage them as a single dataset in DeepFlow.**
+
+When creating or editing a forecast group, **you must designate a representative item.** The past shipment records of the other member items are aggregated into the representative item, so you can review demand forecasting through that single representative. An item can belong to at most one group, and a group is formed when it has two or more items including the representative.
+
+<Frame>
+  <img src="/images/item-management/11-forecast-group.png" alt="Forecast group management" />
+</Frame>
+
+<Steps>
+  <Step title="Create a new group">
+    Open the detail panel of one of the items to group. Click **+ Link item** in the forecast group area to open the "Link items to group" modal. Search for the items to group together and check them. If no item is selected, the **Link** button stays disabled.
+  </Step>
+  <Step title="Designate the representative item">
+    Once you select items, a "Choose representative item" section appears at the bottom. Pick the representative among the candidates (the current item plus the selected ones). Clicking **Link** creates the group, and grouped items show the representative's item code in the "Representative code" column on the item management screen. Items sharing the same representative code belong to the same forecast group.
+  </Step>
+  <Step title="Representative item and active status">
+    Within a group, the representative item is fixed to active and member items to inactive, with no individual toggle. The member items' past shipment volumes are aggregated into the representative and shown on the forecast screen.
+  </Step>
+  <Step title="Change the representative item">
+    In the member list, click "Set as representative" on the desired member row to open the "Change representative item" confirmation modal. Clicking **Save** moves the representative — the new representative becomes active and the remaining members become inactive.
+  </Step>
+  <Step title="Merge with another group">
+    In the "Link items to group" modal, linking an item that already belongs to another group (shown with a "In group" badge) merges that entire group in. However, selecting items from two different groups at once blocks the link. (Only one existing group can be merged at a time.)
+  </Step>
+  <Step title="Unlink a member item">
+    Click the 🗑 (remove) on a member row to open the "Unlink item" modal. Choose that item's forecast status (active/inactive) after removal and click **Unlink**. The representative item's remove button is disabled, so change the representative to another member first, then remove. When all members are removed and only the representative remains, the group dissolves automatically and the item becomes standalone (ungrouped).
+  </Step>
+</Steps>
+
+## [9] Reviewing change history
+
+Track who changed item information and when.
+
+<Frame>
+  <img src="/images/item-management/12-history.png" alt="Change history screen" />
+</Frame>
+
+<Steps>
+  <Step title="View the activity log">
+    In the activity log area of the detail panel, review date, author, and content in reverse-chronological order. Attribute edits, discontinuation set/undo, and activate/deactivate actions are recorded.
+  </Step>
+  <Step title="Distinguish the editor type">
+    Changes made by a user show the user's name; changes made by the system (such as dataset uploads) are shown as "System".
+  </Step>
+</Steps>
+
+## [10] Understanding the link with the forecast screen
+
+The active/inactive status and forecast group settings from item management are linked to the demand forecast screen.
+
+<Frame>
+  <img src="/images/item-management/13-forecast-linkage.png" alt="Forecast linkage screen" />
+</Frame>
+
+<Steps>
+  <Step title="Item visibility rules">
+    Only active items appear on the demand forecast screen. Inactive items are not shown even if they have a forecast value. Discontinuation is not a visibility condition, so a discontinued but active item is still shown.
+  </Step>
+  <Step title="Forecast group visibility">
+    A forecast group appears as a single representative-item row, with member items' shipment volumes and forecast values aggregated into the representative. Changing the representative immediately moves both the displayed item and the aggregation target to the new representative.
+  </Step>
+</Steps>

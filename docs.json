@@ -54,6 +54,7 @@
                   "ko/materials",
                   "ko/dataset",
                   "ko/sop",
+                  "ko/item-management",
                   "ko/users"
                 ]
               },
@@ -111,6 +112,7 @@
                   "en/materials",
                   "en/dataset",
                   "en/sop",
+                  "en/item-management",
                   "en/users"
                 ]
               },

@@ -6,9 +6,31 @@ mode: "center"
 
 <div className="release-notes-page">
   <div className="release-list">
-    <div className="release-empty">
-      <p className="release-empty-title">아직 등록된 릴리즈 노트가 없습니다</p>
-      <p className="release-empty-desc">새로운 기능과 업데이트 소식을 곧 이곳에서 안내드리겠습니다.</p>
+    <div className="release-card">
+      <div className="release-card-meta">
+        <span className="release-card-date">2026년 7월 16일</span>
+      </div>
+      <div className="release-card-tags">
+        <span className="release-tag release-tag-new">New</span>
+      </div>
+      <h2 className="release-card-title">품목 관리</h2>
+      <p className="release-card-summary">품목관리 메뉴가 새로워졌습니다.</p>
+      <div className="release-card-body">
+        <img src="/images/release-notes/2026-07-16-item-management.png" alt="품목 관리 화면" style={{ width: "100%", borderRadius: "10px", border: "1px solid #e5e7eb", marginBottom: "1.25rem" }} />
+        <p>품목관리 메뉴에서 수요예측 대상 품목을 직접 관리하고, 각 품목의 메타 정보(상태·속성·담당자)를 관리할 수 있습니다. 제품 리뉴얼이나 후속 출시처럼 시리즈성으로 이어 판매되는 품목은 과거 히스토리를 공유하여 더 정확하게 예측할 수 있습니다.</p>
+        <p><strong>‘활성’ 상태의 품목들이 예측 대상에 1차적으로 포함되어 AI가 미래 구간을 예측합니다.</strong></p>
+        <ul>
+          <li><strong>수요예측 메뉴에 표시할 품목 선택:</strong> ‘활성’으로 지정한 품목은 수요예측 리스트에 항상 표시됩니다. 현재 관리 대상이 되는 품목을 직접 활성화/비활성화해 관리할 수 있습니다.</li>
+          <li><strong>사용자 정의 속성 관리:</strong> 규격, 지역, 브랜드명처럼 별도로 관리하고 싶은 속성을 [속성 관리]에서 직접 추가하고, 목록에 표시할지 여부를 설정할 수 있습니다.</li>
+          <li><strong>출시일·단종일 관리:</strong> 품목별로 출시일과 단종일을 설정할 수 있습니다. 정확한 출시일/단종일 관리는 예측 모델의 성능 향상에 도움이 됩니다.</li>
+          <li><strong>단종·신제품 상태 관리:</strong> 단종일을 설정하거나 제품 출시일과 신제품 판정 기준을 설정하여 제품 라이프사이클의 상태를 관리할 수 있습니다.</li>
+          <li><strong>품목별 담당자 지정:</strong> 품목마다 담당자를 지정할 수 있으며, 해당 정보는 향후 ‘나의 담당 품목만 보기’와 같은 개인화 기능의 기반으로 활용될 예정입니다.</li>
+          <li><strong>예측 그룹 관리:</strong> 제품 리뉴얼이나 후속 제품 출시 등으로 이전 제품의 판매 이력을 이어서 봐야 하는 경우, 여러 품목을 하나의 예측 그룹으로 묶어 단일 수요예측 대상으로 관리할 수 있습니다. 과거 판매 흐름이 끊기지 않고 연결되어 예측 정확도가 높아집니다.</li>
+        </ul>
+      </div>
+      <div className="release-card-links">
+        <p><span className="release-card-links-label">관련 가이드</span> <a href="/ko/item-management">품목 관리</a></p>
+      </div>
     </div>
   </div>
 </div>

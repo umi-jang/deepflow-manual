@@ -6,9 +6,31 @@ mode: "center"
 
 <div className="release-notes-page">
   <div className="release-list">
-    <div className="release-empty">
-      <p className="release-empty-title">No release notes yet</p>
-      <p className="release-empty-desc">News about new features and updates will appear here soon.</p>
+    <div className="release-card">
+      <div className="release-card-meta">
+        <span className="release-card-date">July 16, 2026</span>
+      </div>
+      <div className="release-card-tags">
+        <span className="release-tag release-tag-new">New</span>
+      </div>
+      <h2 className="release-card-title">Item Management</h2>
+      <p className="release-card-summary">A renewed Item Management menu lets you manage forecast-target items and set their status, attributes, owners, and forecast groups all in one place.</p>
+      <div className="release-card-body">
+        <img src="/images/release-notes/2026-07-16-item-management.png" alt="Item Management screen" style={{ width: "100%", borderRadius: "10px", border: "1px solid #e5e7eb", marginBottom: "1.25rem" }} />
+        <p>In the Item Management menu you can directly manage the items targeted for demand forecasting and maintain each item's metadata (status, attributes, owners). Items that sell in a series — such as product renewals or follow-up launches — can share past history for more accurate forecasting.</p>
+        <p><strong>Items in the "Active" status are included in forecasting first, and the AI forecasts their future periods.</strong></p>
+        <ul>
+          <li><strong>Choose which items appear in the forecast menu:</strong> Items set to "Active" always appear in the forecast list. You can activate or deactivate the items currently under management yourself.</li>
+          <li><strong>Manage custom attributes:</strong> For attributes you want to track separately — such as specification, region, or brand name — add them in [Manage attributes] and choose whether to show them in the list.</li>
+          <li><strong>Manage release and discontinuation dates:</strong> Set a release date and discontinuation date per item. Accurate date management helps improve the forecast model's performance.</li>
+          <li><strong>Manage discontinuation and new-product status:</strong> Set a discontinuation date, or set the release date and new-product threshold, to manage the product lifecycle status.</li>
+          <li><strong>Assign owners per item:</strong> Assign an owner to each item. This will serve as the basis for future personalization features such as "show only my items."</li>
+          <li><strong>Manage forecast groups:</strong> When you need to carry over a previous product's sales history — after a renewal or follow-up launch — group multiple items into a single forecast group managed as one forecast target. Past sales flow stays connected, improving forecast accuracy.</li>
+        </ul>
+      </div>
+      <div className="release-card-links">
+        <p><span className="release-card-links-label">Related guide</span> <a href="/en/item-management">Item Management</a></p>
+      </div>
     </div>
   </div>
 </div>
